@@ -5,8 +5,6 @@ return require('packer').startup(function(use)
 
 	use 'wbthomason/packer.nvim'
 
-    use 'folke/which-key.nvim'
-
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -20,23 +18,16 @@ return require('packer').startup(function(use)
 		end
 	})
 
-    -- Currently not working, TODO
     use {
         'numToStr/Comment.nvim',
-        opts = {}
+        config = function()
+            require('Comment').setup()
+        end
     }
 
-    -- Currently not working, TODO
     use {
         'nvim-lualine/lualine.nvim',
-        opts = {
-            options = {
-                icons_enabled = true,
-                theme = 'rose-pine',
-                component_separators = '|',
-                section_separators = '',
-            },
-        },
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true}
     }
 
 

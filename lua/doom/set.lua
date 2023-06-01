@@ -29,8 +29,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 2
-vim.o.timeout = true
-vim.o.timeoutlen = 300
 
 vim.opt.colorcolumn = "80"
 
@@ -45,4 +43,6 @@ vim.o.clipboard = 'unnamedplus'
 
 vim.o.mouse = 'a'
 
-
+-- Config for which-key.nvim delay
+vim.opt.timeout = true
+vim.opt.ttimeoutlen = 300
